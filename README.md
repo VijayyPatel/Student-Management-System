@@ -49,6 +49,32 @@ This class manages the collection of students and provides methods for:
 - Compile the Java file: ```javac StudentManagementSystemGUI.java```
 - Run the file: ```java StudentManagementSystemGUI```
 
+
+## Example Usage
+
+   ``` public class Main {
+    public static void main(String[] args) {
+        StudentManagementSystem sms = new StudentManagementSystem();
+
+        // Adding a new student
+        Student student1 = new Student("John Doe", "001", "A");
+        sms.addStudent(student1);
+
+        // Displaying all students
+        sms.displayAllStudents();
+
+        // Searching for a student
+        Student foundStudent = sms.searchStudent("001");
+        if (foundStudent != null) {
+            System.out.println("Student found: " + foundStudent.getName());
+        } else {
+            System.out.println("Student not found.");
+        }
+    }
+}
+```
+
+
 # Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request if you have any improvements or suggestions.
